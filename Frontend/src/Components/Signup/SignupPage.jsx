@@ -14,7 +14,7 @@ const SignupPage = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3003/`);
+                const response = await fetch(`https://claw-twitter-api.onrender.com/`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
@@ -51,7 +51,7 @@ const SignupPage = () => {
 
         if(f==0) return;
         
-        var res = axios.post('http://localhost:3003/',data);
+        var res = axios.post('https://claw-twitter-api.onrender.com/',data);
         navigate('/login')
         setlodingButton(false);
     };
